@@ -1,11 +1,21 @@
-<script setup></script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div>
+
+  </div>
 </template>
 
-<style scoped></style>
+<script setup>
+  const chamber = [
+    {num: 1},
+    {num: 2},
+    {num: 3},
+    {num: 4},
+    {num: 5},
+    {num: 6},
+  ];
+</script>
+
+<style scoped>
+
+</style>
