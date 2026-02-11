@@ -15,7 +15,7 @@
     {num: 6},
   ];
 </script>
-
+const prob = 
 <style scoped>
 
 </style>
