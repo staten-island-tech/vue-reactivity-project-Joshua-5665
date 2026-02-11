@@ -7,14 +7,10 @@
 </template>
 
 <script setup>
-  const chamber = [
-    {num: 1},
-    {num: 2},
-    {num: 3},
-    {num: 4},
-    {num: 5},
-    {num: 6},
-  ];
+import { ref } from 'vue'
+  const chamber = ref([
+    
+  ])
 
 const rev = document.querySelector('.rev');
 const displayBox = document.querySelector('.displayBox');
