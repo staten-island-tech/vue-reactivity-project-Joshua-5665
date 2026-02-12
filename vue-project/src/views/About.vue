@@ -8,10 +8,11 @@
          <button class="work" @click="increments">Work</button>
          <button class="work" @click="increments2" v-if="money >= 50">Work+1</button>
          <button class="work" @click="increments3" v-if="money >= 200">Work+2</button>
-         <button class="work" @click="upgrade" v-if="money >= 200">Farm</button>
+         <button class="work" @click="upgrade" v-if="money >= 500">Farm</button>
          <button class="work" @click="upgrade2" v-if="money >= 1000">Bakery</button>
          <button class="work" @click="upgrade3" v-if="money >=2000">Factory</button>
         <div class="moneyBox"> ${{ money }}</div>
+        <RouterLink to="/work">Home</RouterLink>
     </div>
 </template>
 
@@ -30,10 +31,11 @@ import { ref } from 'vue'
     }
     
     const isWorking = ref(false)
+    const isWorking2 = ref(false)
+    const isWorking3 = ref(false)
 
     function upgrade() {
         if (isWorking.value) return
-        money.value-=100
         isWorking.value = true
         setInterval(()=> {
             money.value+=1
@@ -41,18 +43,16 @@ import { ref } from 'vue'
     }
 
     function upgrade2() {
-        if(isWorking.value) return
-
-        isWorking.value = true
+        if(isWorking2.value) return
+        isWorking2.value = true
         setInterval(() => {
             money.value+=10
         }, 2000)
     }
 
     function upgrade3() {
-        if(isWorking.value) return
-
-        isWorking.value = true
+        if(isWorking3.value) return
+        isWorking3.value = true
         setInterval(() => {
             money.value+=50
         }, 2000)
