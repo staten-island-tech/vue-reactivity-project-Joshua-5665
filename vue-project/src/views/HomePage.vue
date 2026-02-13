@@ -9,12 +9,13 @@
         <div class="moneyBox"> ${{ money }}</div>
         <RouterLink to="/work">Home</RouterLink>
         <Upgrades/>
-    </div>
+        </div>
 </template>
 
 <script setup>
 import Upgrades from '@/components/Upgrades.vue'
 import money from '@/store/store.js'
+import perSecond from '@/store/store.js'
     
     function increments() {
         money.value++

@@ -1,69 +1,80 @@
 <template>
     <div class="upgradesContainer">
     <p>Utilities</p>
-    <button class="upgrade" @click="upgrade1" :disabled="money < 20">Money Tree</button>
-    <button class="upgrade" @click="upgrade2" :disabled="money < 50">Farm</button>
-    <button class="upgrade" @click="upgrade3" :disabled="money < 100">Bakery</button>
-    <button class="upgrade" @click="upgrade4" :disabled="money < 200">Factory</button>
-    <button class="upgrade" @click="upgrade5" :disabled="money < 400">Bank</button>
-    <button class="upgrade" @click="upgrade6" :disabled="money < 800">Gold Mine</button>
+    <button class="upgrade" @click="upgrade1" :disabled="money < price1">Money Tree - ${{ price1 }} x{{ items1 }}</button>
+    <button class="upgrade" @click="upgrade2" :disabled="money < price2">Bakery - ${{ price2 }} x{{ items2 }}</button>
+    <button class="upgrade" @click="upgrade3" :disabled="money < price3">Farm ${{ price3 }}</button>
+    <button class="upgrade" @click="upgrade4" :disabled="money < price4">Factory - ${{ price4 }}</button>
+    <button class="upgrade" @click="upgrade5" :disabled="money < price5">Bank - ${{ price5 }}</button>
+    <button class="upgrade" @click="upgrade6" :disabled="money < price6">Gold Mine - ${{ price6 }}</button>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import money from '@/store/store.js'
- 
+
+const price1 = ref(50)
+const price2 = ref(200)
+const price3 = ref(500)
+const price4 = ref(2000)
+const price5 = ref(7000)
+const price6 = ref(20000)
+    
+const items1 = ref(0)
+const items2 = ref(0)
 
     function upgrade1() {
-        if(money.value >= 50) {
-            money.value-=50
-            setInterval(()=> {
+        money.value-=price1.value
+        setInterval(()=> {
             money.value+=1
         }, 1000)
-        } else {
-            money.value-=0
-        }
-        
-    }
-
+        price1.value+=25
+        items1.value++
+    } 
+    
     function upgrade2() {
-        if(money.value >= 100) {
-            money.value-=100
-            setInterval(() => {
-            money.value+=5
+        money.value-=price2.value 
+        setInterval(() => {
+            money.value+=4
         }, 1000)
-        } else {
-            money.value-=0
-        }
-    }
+        price2.value+=50
+        items2.value++
+     } 
+    
 
     function upgrade3() {
-        money.value-=200
+        money.value-=price3.value
         setInterval(() => {
-            money.value+=20
+            money.value+=10
         }, 1000)
-    }
+        price3.value+=80
+    } 
+    
 
     function upgrade4() {
-        money.value-=500
+        money.value-=price4.value
         setInterval(() => {
-            money.value+=50
+            money.value+=35
         }, 1000)
-    }
+        price4.value+=400
+    } 
+    
 
     function upgrade5() {
-        money.value-=2000
+        money.value-=price5.value
         setInterval(() => {
-            money.value+=100
+            money.value+=80
         }, 1000)
+        price5.value+=2150
     }
 
     function upgrade6() {
-        money.value-=5000
+        money.value-=price6.value
         setInterval(() => {
-            money.value+=200
+            money.value+=150
         }, 1000)
+        price6.value+=11500
     }
 </script>
 
@@ -88,4 +99,5 @@ import money from '@/store/store.js'
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         padding: 20px;
     }
+
 </style>
