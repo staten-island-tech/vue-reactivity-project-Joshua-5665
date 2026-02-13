@@ -1,12 +1,21 @@
 <template>
     <div class="upgradesContainer">
     <p>Utilities</p>
-    <button class="upgrade" @click="upgrade1" :disabled="money < price1">Money Tree - ${{ price1 }} x{{ items1 }}</button>
-    <button class="upgrade" @click="upgrade2" :disabled="money < price2">Bakery - ${{ price2 }} x{{ items2 }}</button>
+    <button class="upgrade" @click="upgrade1" :disabled="money < price1">Money Tree - ${{ price1 }}</button>
+    <button class="upgrade" @click="upgrade2" :disabled="money < price2">Bakery - ${{ price2 }}</button>
     <button class="upgrade" @click="upgrade3" :disabled="money < price3">Farm ${{ price3 }}</button>
     <button class="upgrade" @click="upgrade4" :disabled="money < price4">Factory - ${{ price4 }}</button>
     <button class="upgrade" @click="upgrade5" :disabled="money < price5">Bank - ${{ price5 }}</button>
     <button class="upgrade" @click="upgrade6" :disabled="money < price6">Gold Mine - ${{ price6 }}</button>
+
+    <div class="itemCounter">
+        <div class="items">x{{ items1 }}</div>
+        <div class="items">x{{ items2 }}</div>
+        <div class="items">x{{ items3 }}</div>
+        <div class="items">x{{ items4 }}</div>
+        <div class="items">x{{ items5 }}</div>
+        <div class="items">x{{ items6 }}</div>
+    </div>
     </div>
 </template>
 
@@ -23,6 +32,10 @@ const price6 = ref(20000)
     
 const items1 = ref(0)
 const items2 = ref(0)
+const items3 = ref(0)
+const items4 = ref(0)
+const items5 = ref(0)
+const items6 = ref(0)
 
     function upgrade1() {
         money.value-=price1.value
@@ -49,6 +62,7 @@ const items2 = ref(0)
             money.value+=10
         }, 1000)
         price3.value+=80
+        items3.value++
     } 
     
 
@@ -58,6 +72,7 @@ const items2 = ref(0)
             money.value+=35
         }, 1000)
         price4.value+=400
+        items4.value++
     } 
     
 
@@ -67,6 +82,7 @@ const items2 = ref(0)
             money.value+=80
         }, 1000)
         price5.value+=2150
+        items5.value++
     }
 
     function upgrade6() {
@@ -75,10 +91,27 @@ const items2 = ref(0)
             money.value+=150
         }, 1000)
         price6.value+=11500
+        items6.value++
     }
 </script>
 
 <style>
+    .items {
+        background-color: rgb(235, 235, 235);
+        height: 50px;
+        width: 100px;
+        margin: 5px;
+        margin-left: 20px;
+        align-content: center;
+        border-radius: 20px;
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .itemCounter {
+        transform: translate(12vw, -36.1vh);
+        text-align: center;
+    }
     .upgrade {
         display: flex;
         align-items: center;
