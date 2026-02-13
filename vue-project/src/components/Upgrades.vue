@@ -1,13 +1,14 @@
 <template>
+    <div class="utilityContainer">
     <div class="upgradesContainer">
-    <p>Utilities</p>
+        <p>Utilities</p>
     <button class="upgrade" @click="upgrade1" :disabled="money < price1">Money Tree - ${{ price1 }}</button>
     <button class="upgrade" @click="upgrade2" :disabled="money < price2">Bakery - ${{ price2 }}</button>
-    <button class="upgrade" @click="upgrade3" :disabled="money < price3">Farm ${{ price3 }}</button>
+    <button class="upgrade" @click="upgrade3" :disabled="money < price3">Farm - ${{ price3 }}</button>
     <button class="upgrade" @click="upgrade4" :disabled="money < price4">Factory - ${{ price4 }}</button>
     <button class="upgrade" @click="upgrade5" :disabled="money < price5">Bank - ${{ price5 }}</button>
     <button class="upgrade" @click="upgrade6" :disabled="money < price6">Gold Mine - ${{ price6 }}</button>
-
+    </div>
     <div class="itemCounter">
         <div class="items">x{{ items1 }}</div>
         <div class="items">x{{ items2 }}</div>
@@ -16,7 +17,7 @@
         <div class="items">x{{ items5 }}</div>
         <div class="items">x{{ items6 }}</div>
     </div>
-    </div>
+</div>
 </template>
 
 <script setup>
@@ -101,7 +102,7 @@ const items6 = ref(0)
         height: 50px;
         width: 100px;
         margin: 5px;
-        margin-left: 20px;
+        
         align-content: center;
         border-radius: 20px;
         font-size: 20px;
@@ -109,28 +110,35 @@ const items6 = ref(0)
     }
 
     .itemCounter {
-        transform: translate(12vw, -36.1vh);
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        margin-top: 14.7vh;
     }
     .upgrade {
         display: flex;
         align-items: center;
-        justify-content: center;
         height: 50px;
         width: 200px;
-        margin: 5px;
+        margin-top: 10px;
         margin-left: 20px;
     }
-    .upgradesContainer {
+
+    .utilityContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         width: 30vw;
         height: 90vh;
         background-color: grey;
-        transform: translate(69vw, -55vh);
+        margin-left: auto;
+        margin-top: -58vh;
     }
     p {
         font-size: 30px;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         padding: 20px;
+        margin-top: 1vh
     }
 
 </style>
