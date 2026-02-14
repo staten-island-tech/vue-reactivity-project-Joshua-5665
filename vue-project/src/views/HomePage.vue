@@ -8,6 +8,7 @@
         <Upgrades/>
         <Information/>
         <Clickups/>
+        
     </div>
 </template>
 

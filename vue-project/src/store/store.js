@@ -16,5 +16,4 @@ export const price6 = ref(200000)
 export const price7 = ref(1250000)
 export const click = ref(1)
 export const priceClick = ref(100)
-
   
