@@ -16,6 +16,7 @@
     ])
 
     function add() {
+        money.value-=priceClick.value
         click.value*=2
         priceClick.value*=4
     }
