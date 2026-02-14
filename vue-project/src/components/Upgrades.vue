@@ -32,14 +32,13 @@ import {items4} from '@/store/store.js'
 import {items5} from '@/store/store.js'
 import {items6} from '@/store/store.js'
 import {items7} from '@/store/store.js'
-
-const price1 = ref(50)
-const price2 = ref(200)
-const price3 = ref(500)
-const price4 = ref(2000)
-const price5 = ref(11250)
-const price6 = ref(200000)
-const price7 = ref(1250000)
+import { price1 } from '@/store/store.js'
+import { price2 } from '@/store/store.js'
+import { price3 } from '@/store/store.js'
+import { price4 } from '@/store/store.js'
+import { price5 } from '@/store/store.js'
+import { price6 } from '@/store/store.js'
+import { price7 } from '@/store/store.js'
 
     function upgrade1() {
         money.value-=price1.value
@@ -141,12 +140,12 @@ const price7 = ref(1250000)
         flex-direction: column;
         flex-wrap: wrap;
         width: 30vw;
-        height: 70vh;
+        height: 63vh;
         background-color: grey;
         justify-self: right;
         margin-right: 10px;
         margin-top: -310px;
-        overflow: hidden;
+        overflow-y: scroll;
     }
     p {
         font-size: 30px;

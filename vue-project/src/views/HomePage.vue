@@ -6,15 +6,20 @@
         <div class="moneyBox"> ${{ money }}</div>
         <RouterLink to="/work">Home</RouterLink>
         <Upgrades/>
+        <Information/>
+        <Clickups/>
     </div>
 </template>
 
 <script setup>
 import Upgrades from '@/components/Upgrades.vue'
+import Information from '@/components/Information.vue'
+import Clickups from '@/components/Clickups.vue'
+import { click } from '@/store/store.js'
 import {money} from '@/store/store.js'
     
     function increments() {
-        money.value++
+        money.value+=click.value
     }
 </script>
 

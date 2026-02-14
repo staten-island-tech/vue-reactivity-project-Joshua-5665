@@ -1,13 +1,20 @@
 import { ref } from 'vue'
-export const money = ref(0);
-export const items1 = ref(0);
+export const money = ref(0)
+export const items1 = ref(0)
 export const items2 = ref(0)
 export const items3 = ref(0)
 export const items4 = ref(0)
 export const items5 = ref(0)
 export const items6 = ref(0)
 export const items7 = ref(0)
-  
-  
+export const price1 = ref(50)
+export const price2 = ref(200)
+export const price3 = ref(500)
+export const price4 = ref(2000)
+export const price5 = ref(11250)
+export const price6 = ref(200000)
+export const price7 = ref(1250000)
+export const click = ref(1)
+export const priceClick = ref(100)
 
   
