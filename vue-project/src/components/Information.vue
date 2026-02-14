@@ -14,9 +14,6 @@
         {name: "Gold Mine", perSecond: 180,},
         {name: "Money Kingdom", perSecond: 550,}
     ];
-
-
-
 </script>
 
 <style scoped>

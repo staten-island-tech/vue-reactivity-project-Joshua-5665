@@ -3,7 +3,7 @@
         <h1>Become a Billionaire</h1>
         <h2>Your job starts now</h2>
          <button class="work" @click="increments">Work</button>
-        <div class="moneyBox"> ${{ money }}</div>
+        <div class="moneyBox"> Income: ${{ money }}</div>
         <RouterLink to="/work">Home</RouterLink>
         <Upgrades/>
         <Information/>
@@ -28,6 +28,9 @@ import {money} from '@/store/store.js'
         height: 50px;
         width: 100px;
         margin: 5px;
+        background-color: rgb(196, 196, 196);
+        border-radius: 10px;
+        cursor: pointer;
     }
 
     .moneyBox{
@@ -44,5 +47,7 @@ import {money} from '@/store/store.js'
         width: 100vw; 
         text-align: center;
     }
-
+    body{
+        background-color: rgb(68, 128, 50);
+    }
 </style>
