@@ -39,6 +39,7 @@ import { price4 } from '@/store/store.js'
 import { price5 } from '@/store/store.js'
 import { price6 } from '@/store/store.js'
 import { price7 } from '@/store/store.js'
+import {perClick} from '@/store/store.js'
 
     function upgrade1() {
         money.value-=price1.value
@@ -47,6 +48,7 @@ import { price7 } from '@/store/store.js'
         }, 1000)
         price1.value+=25
         items1.value++
+        perClick.value++
     } 
     
     function upgrade2() {
@@ -56,6 +58,7 @@ import { price7 } from '@/store/store.js'
         }, 1000)
         price2.value+=50
         items2.value++
+        perClick.value+=4
      } 
     
 
@@ -66,6 +69,7 @@ import { price7 } from '@/store/store.js'
         }, 1000)
         price3.value+=80
         items3.value++
+        perClick.value+=10
     } 
     
 
@@ -76,25 +80,28 @@ import { price7 } from '@/store/store.js'
         }, 1000)
         price4.value+=400
         items4.value++
+        perClick.value+=35
     } 
     
 
     function upgrade5() {
         money.value-=price5.value
         setInterval(() => {
-            money.value+=80
+            money.value+=110
         }, 1000)
         price5.value+=2150
         items5.value++
+        perClick.value+=110
     }
 
     function upgrade6() {
         money.value-=price6.value
         setInterval(() => {
-            money.value+=180
+            money.value+=225
         }, 1000)
         price6.value+=11500
         items6.value++
+        perClick.value+=225
     }
 
      function upgrade7() {
@@ -104,6 +111,7 @@ import { price7 } from '@/store/store.js'
         }, 1000)
         price7.value+=210200
         items7.value++
+        perClick.value+=550
     }
 </script>
 
