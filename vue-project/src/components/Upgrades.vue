@@ -97,21 +97,21 @@ import {perClick} from '@/store/store.js'
     function upgrade6() {
         money.value-=price6.value
         setInterval(() => {
-            money.value+=225
+            money.value+=500
         }, 1000)
         price6.value+=11500
         items6.value++
-        perClick.value+=225
+        perClick.value+=500
     }
 
      function upgrade7() {
         money.value-=price7.value
         setInterval(() => {
-            money.value+=550
+            money.value+=4650
         }, 1000)
         price7.value+=210200
         items7.value++
-        perClick.value+=550
+        perClick.value+=4650
     }
 </script>
 

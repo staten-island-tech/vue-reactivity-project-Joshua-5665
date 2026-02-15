@@ -11,8 +11,8 @@
         {name: "Farm", perSecond: 10,},
         {name: "Factory", perSecond: 35,},
         {name: "Bank", perSecond: 110,},
-        {name: "Gold Mine", perSecond: 225,},
-        {name: "Money Kingdom", perSecond: 550,}
+        {name: "Gold Mine", perSecond: 500,},
+        {name: "Money Kingdom", perSecond: 4650,}
     ];
 </script>
 
