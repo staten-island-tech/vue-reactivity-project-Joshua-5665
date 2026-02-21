@@ -24,7 +24,7 @@ import {perClick} from '@/store/store.js'
     function increments() {
         money.value+=click.value
     }
-    
+
 </script>
 
 <style>
