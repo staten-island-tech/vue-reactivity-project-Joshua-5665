@@ -91,5 +91,6 @@ function say() {
   }
   h3,h3{
     color: white;
+    cursor: pointer;
   }
 </style>

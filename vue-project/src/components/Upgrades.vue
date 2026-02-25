@@ -23,7 +23,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import {money} from '@/store/store.js'
 import {items1} from '@/store/store.js'
 import {items2} from '@/store/store.js'

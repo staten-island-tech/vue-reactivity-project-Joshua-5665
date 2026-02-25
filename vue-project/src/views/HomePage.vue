@@ -2,7 +2,7 @@
     <div class="word">
         <h1>Become a Billionaire</h1>
         <h2>Your job starts now</h2>
-         <button class="work" @click="increments">Work</button>
+         <button class="work" @click="increments" @mouseover="colorIn" @mouseout="colorOut">Work</button>
          <a>Per Second: ${{ perClick }}</a>
         <div class="moneyBox"> Income: ${{ money }}</div>
         <RouterLink to="/work">Gamble</RouterLink>
@@ -23,6 +23,14 @@ import {perClick} from '@/store/store.js'
     
     function increments() {
         money.value+=click.value
+    }
+
+    function colorIn() {
+        document.querySelector('.work').style.backgroundColor = 'rgb(173, 173, 173)';
+    }
+
+    function colorOut() {
+        document.querySelector('.work').style.backgroundColor = '';
     }
 
 </script>
