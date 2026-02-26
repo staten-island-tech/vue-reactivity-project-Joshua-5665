@@ -1,10 +1,11 @@
 <template>
     <div class="information" v-for="upgrade in upgrades">
-        {{ upgrade.name }} | ${{ upgrade.perSecond }} per second
+        {{ upgrade.name }} | ${{upgrade.perSecond}} per second
     </div>
 </template>
 
 <script setup>
+
     const upgrades = [
         {name: "Money Tree", perSecond: 1,},
         {name: "Bakery", perSecond: 4,},
