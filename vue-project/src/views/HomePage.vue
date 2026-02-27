@@ -19,6 +19,7 @@ import Clickups from '@/components/Clickups.vue'
 import { click } from '@/store/store.js'
 import {money} from '@/store/store.js'
 import {perClick} from '@/store/store.js'
+
     
     function increments() {
         money.value+=click.value

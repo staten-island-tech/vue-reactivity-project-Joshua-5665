@@ -18,4 +18,4 @@ export const click = ref(1)
 export const priceClick = ref(100)
 export const priceClick2 = ref(50)
 export const perClick = ref(0)
-export const workRate1 = ref(1)
+

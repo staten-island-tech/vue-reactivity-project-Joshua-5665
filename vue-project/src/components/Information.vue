@@ -5,8 +5,9 @@
 </template>
 
 <script setup>
+    import { reactive } from 'vue'
 
-    const upgrades = [
+    const upgrades = reactive([
         {name: "Money Tree", perSecond: 1,},
         {name: "Bakery", perSecond: 4,},
         {name: "Farm", perSecond: 10,},
@@ -14,7 +15,7 @@
         {name: "Bank", perSecond: 110,},
         {name: "Gold Mine", perSecond: 500,},
         {name: "Money Kingdom", perSecond: 4650,}
-    ];
+    ]);
 </script>
 
 <style scoped>
