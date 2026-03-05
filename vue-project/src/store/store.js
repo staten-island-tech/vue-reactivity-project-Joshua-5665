@@ -19,9 +19,3 @@ export const priceClick = ref(100)
 export const priceClick2 = ref(50)
 export const perClick = ref(0)
 
-export const extras = reactive([
-    {name: Button1},
-    {name: Button2},
-    {name: Button3},
-    {name: Button4}
-])
