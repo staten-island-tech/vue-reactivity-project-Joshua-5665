@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 export const money = ref(0)
 export const items1 = ref(0)
 export const items2 = ref(0)
@@ -19,3 +19,9 @@ export const priceClick = ref(100)
 export const priceClick2 = ref(50)
 export const perClick = ref(0)
 
+export const extras = reactive([
+    {name: Button1},
+    {name: Button2},
+    {name: Button3},
+    {name: Button4}
+])

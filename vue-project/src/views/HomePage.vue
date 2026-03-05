@@ -6,9 +6,11 @@
          <a>Per Second: ${{ perClick }}</a>
         <div class="moneyBox"> Income: ${{ money }}</div>
         <RouterLink to="/work">Gamble</RouterLink>
+
         <Upgrades/>
         <Information/>
         <Clickups/>
+        <Extras/>
     </div>
 </template>
 
@@ -16,9 +18,11 @@
 import Upgrades from '@/components/Upgrades.vue'
 import Information from '@/components/Information.vue'
 import Clickups from '@/components/Clickups.vue'
+import Extras from '@/components/Extras.vue'
 import { click } from '@/store/store.js'
 import {money} from '@/store/store.js'
 import {perClick} from '@/store/store.js'
+
 
     
     function increments() {
@@ -68,5 +72,10 @@ import {perClick} from '@/store/store.js'
     }
     body{
         background-color: rgb(68, 128, 50);
+    }
+    .extrasBox {
+        width: 300px;
+        height: 800px;
+        background-color: gray;
     }
 </style>
